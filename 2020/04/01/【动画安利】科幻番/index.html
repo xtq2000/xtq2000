@@ -249,23 +249,21 @@
   
 
   
-  {% if site.comment_gitment_repo %}
-<div id="gitmentContainer"></div>
+  <div id="gitment-ctn"></div>
 <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
 <script src="https://billts.site/js/gitment.js"></script>
 <script>
-    var gitment = new Gitment({
-        id: 'Wed Apr 01 2020 00:44:22 GMT+0800',
-        owner: '{{site.github_username}}',
-        repo: '{{site.comment_gitment_repo}}',
-        oauth: {
-            client_id: '{{site.comment_gitment_clientId}}',
-            client_secret: '{{site.comment_gitment_clientSecret}}',
-        },
-    });
-    gitment.render('gitmentContainer')
+var gitment = new Gitment({
+  id: "http://yoursite.com/xtq2000/2020/04/01/%E3%80%90%E5%8A%A8%E7%94%BB%E5%AE%89%E5%88%A9%E3%80%91%E7%A7%91%E5%B9%BB%E7%95%AA/",
+  owner: 'xtq2000',
+  repo: 'xtq2000Comments',
+  oauth: {
+    client_id: 'cfe5321fb155d54647c4',
+    client_secret: 'fda8056fc08825942d4749e224b05321b2797d33',
+  },
+})
+gitment.render('gitment-ctn')
 </script>
-{% endif %}
 
   
 
